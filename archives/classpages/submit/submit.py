@@ -29,7 +29,7 @@ class Submit:
 
     def enter_birth_date(self, birth_date):
         element = self.driver.find_element(By.ID, birthday_submit_id_locator)
-        ActionChains(self.driver).send_keys_to_element(element, birth_date).perform()
+        element.send_keys(birth_date)
 
     def clear_enter_birth_date(self):
         self.driver.find_element(By.ID, birthday_submit_id_locator).clear()
